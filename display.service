@@ -3,7 +3,7 @@ Description=Display
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/robosapiens/display.py
+ExecStart=/usr/bin/python3 /home/robosapiens/bamboobot_battery_display/display.py
 Restart=always
 
 [Install]
