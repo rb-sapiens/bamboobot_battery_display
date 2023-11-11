@@ -1,5 +1,6 @@
 # BambooBotでバッテリーの残り容量を表示するレポジトリ
 
+### インストール方法
 ```
 git clone git@github.com:rb-sapiens/bamboobot_battery_display.git
 cp bamboobot_battery_display/dispay.service /etc/systemd/system/display.service
