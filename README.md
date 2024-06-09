@@ -3,6 +3,6 @@
 ### インストール方法
 ```
 git clone git@github.com:rb-sapiens/bamboobot_battery_display.git
-cp bamboobot_battery_display/dispay.service /etc/systemd/system/display.service
+cp bamboobot_battery_display/display.service /etc/systemd/system/display.service
 sudo systemctl enable display.service
 ```
