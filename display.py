@@ -8,6 +8,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
+current_battery = 0
 
 def show_battery(rate):
 	disp.clear()
@@ -44,7 +45,7 @@ DC = 23
 SPI_PORT = 0
 SPI_DEVICE = 0
 
-disp = Adafruit_SSD1306.SSD1306_128_32(rst=RST)
+disp = Adafruit_SSD1306.SSD1306_128_32(rst=None, i2c_bus=1, gpio=1)
 
 # Initialize library.
 disp.begin()
@@ -73,4 +74,6 @@ device_address = 0x0b
 while True:
     data = bus.read_byte_data(device_address, 0x0d)
     time.sleep(10)
-    show_battery(int(data))
+    if current_battery is not int(data):
+        show_battery(int(data))
+        current_battery = int(data)
